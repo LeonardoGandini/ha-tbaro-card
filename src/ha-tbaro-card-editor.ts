@@ -10,7 +10,7 @@ type Config = {
   title?: string;
   angle?: 180 | 270;
   unit?: 'hpa' | 'mm' | 'in';
-  show_border?: 'inner' | 'outer' | 'both' | 'none';
+  border?: 'inner' | 'outer' | 'both' | 'none';
   stroke_width?: number;
   needle_color?: string;
   tick_color?: string;
@@ -37,7 +37,7 @@ export class HaTbaroCardEditor extends LitElement {
     { name: 'title', selector: { text: {} } },
     { name: 'angle', selector: { select: { options: [ {value: 180, label: '180°'}, {value: 270, label: '270°'} ] } } },
     { name: 'unit', selector: { select: { options: [ {value: 'hpa', label: 'hPa'}, {value: 'mm', label: 'mmHg'}, {value: 'in', label: 'inHg'} ] } } },
-    { name: 'show_border', selector: { select: { options: [
+    { name: 'border', selector: { select: { options: [
       { value: 'none', label: 'none' },
       { value: 'inner', label: 'inner' },
       { value: 'outer', label: 'outer' },
