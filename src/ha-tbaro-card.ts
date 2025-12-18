@@ -446,7 +446,7 @@ render() {
       tabindex="0"
       aria-label="Show details"
       style="box-shadow:none;background:transparent;border:none;border:none;border-radius:0; cursor:pointer;"
-      .header=${title || undefined}                 
+      .header=${this.config.title || undefined}                 
       @click=${this._onClick}
       @keydown=${this._onKeyDown}
     >
