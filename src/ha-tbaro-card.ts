@@ -442,7 +442,7 @@ render() {
 
   // before building the template
   const hasTitle = !!this.config.title;
-  const svgTop = hasTitle ? '-8px' : '0';   // tighten title→gauge gap
+  const svgTop = hasTitle ? '-16px' : '0';   // tighten title→gauge gap
 
   return html`
     <ha-card 
