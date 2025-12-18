@@ -3,6 +3,7 @@
 import { LitElement, html, css, svg, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
+import { fireEvent } from 'custom-card-helpers';
 
 // Import des icônes SVG comme chaînes via rollup-plugin-string
 // @ts-ignore
@@ -230,6 +231,15 @@ export class HaTbaroCard extends LitElement {
   }
 
 
+  private _showMoreInfo(entityId: string) {
+    this.dispatchEvent(
+      new CustomEvent('hass-more-info', {
+        bubbles: true,
+        composed: true,
+        detail: { entityId },
+      }),
+    );
+  }
 
 
 render() {
